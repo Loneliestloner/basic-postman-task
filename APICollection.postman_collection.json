@@ -173,23 +173,22 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
 									"});\r",
 									"const response = pm.response.json();\r",
 									"// print any kind of variables/message on the screen\r",
-									"console.log(response[3].name);\r",
-									"pm.test(\"Search for a book name called Viscount Who Loved Me\", function (){\r",
-									" pm.expect(response[3].name).to.eql(\"Viscount Who Loved Me\")\r",
-									"});\r",
+									"//console.log(response[3].name);\r",
+									"//pm.test(\"Search for a book name called Viscount Who Loved Me\", function (){\r",
+									" //pm.expect(response[3].name).to.eql(\"Viscount Who Loved Me\")\r",
 									"\r",
 									"/*const Fiction = response.filter((book) => book.type === \"fiction\");\r",
 									"console.log(Fiction)\r",
 									"//Print out the id of a fiction book that is available called \"The Midnight Library\"*/\r",
 									"\r",
 									"\r",
-									"\r",
-									"const Fiction = response.filter((book) => book.type === \"fiction\" && book.available === true && book.name === \"Viscount Who Loved Me\")\r",
+									"/**\r",
+									" const Fiction = response.filter((book) => book.type === \"fiction\" && book.available === true && book.name === \"Viscount Who Loved Me\")\r",
 									"\r",
 									"console.log(Fiction[0].id);\r",
 									"\r",
@@ -202,6 +201,9 @@
 									"\r",
 									"\r",
 									"\r",
+									"* \r",
+									" * \r",
+									" */\r",
 									"\r",
 									""
 								],
@@ -237,10 +239,12 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
 									"});\r",
-									"const response = pm.response.json();\r",
+									"/**\r",
+									" * \r",
+									" * const response = pm.response.json();\r",
 									"// print any kind of variables/message on the screen\r",
 									"\r",
 									"console.log(response[3].id)\r",
@@ -248,6 +252,10 @@
 									"/*const Fiction = response.filter((book) => book.type === \"fiction\");\r",
 									"console.log(Fiction)\r",
 									"//Print out the id of a fiction book that is available called \"The Midnight Library\"*/\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
 									"\r",
 									""
 								],
@@ -283,10 +291,11 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
 									"});\r",
-									"const response = pm.response.json();\r",
+									"/**\r",
+									" * const response = pm.response.json();\r",
 									"// print any kind of variables/message on the screen\r",
 									"console.log(response[2].name);\r",
 									"pm.test(\"Search for a book name called Viscount Who Loved Me\", function (){\r",
@@ -296,8 +305,9 @@
 									"/*const Fiction = response.filter((book) => book.type === \"fiction\");\r",
 									"console.log(Fiction)\r",
 									"//Print out the id of a fiction book that is available called \"The Midnight Library\"*/\r",
-									"\r",
-									"const Fiction = response.filter((book) => book.type === \"fiction\" && book.available === true && book.name === \"Viscount Who Loved Me\")\r",
+									"/**\r",
+									" * \r",
+									" * const Fiction = response.filter((book) => book.type === \"fiction\" && book.available === true && book.name === \"Viscount Who Loved Me\")\r",
 									"\r",
 									"console.log(Fiction[0].id);\r",
 									"\r",
@@ -306,6 +316,10 @@
 									"});\r",
 									"\r",
 									"pm.globals.set(\"bookId\", Fiction[0].id);\r",
+									"\r",
+									"\r",
+									" */\r",
+									"\r",
 									"\r",
 									"\r",
 									"\r",
@@ -709,12 +723,12 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 204\", function () {\r",
-									"    pm.response.to.have.status(204);\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Status code name has string OK\", function () {\r",
-									"    pm.response.to.have.status(\"No Content\");\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -769,12 +783,12 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 204\", function () {\r",
-									"    pm.response.to.have.status(204);\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Status code name has string OK\", function () {\r",
-									"    pm.response.to.have.status(\"No Content\");\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -829,12 +843,12 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 204\", function () {\r",
-									"    pm.response.to.have.status(204);\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
 									"});\r",
 									"\r",
 									"pm.test(\"Status code name has string OK\", function () {\r",
-									"    pm.response.to.have.status(\"No Content\");\r",
+									"    pm.response.to.have.status(\"Not Found\");\r",
 									"});"
 								],
 								"type": "text/javascript"
