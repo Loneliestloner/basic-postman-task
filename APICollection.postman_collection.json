@@ -39,12 +39,9 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://demo.fusio-project.org/index.php/todo",
-							"protocol": "https",
+							"raw": "{{baseurl}}/index.php/todo",
 							"host": [
-								"demo",
-								"fusio-project",
-								"org"
+								"{{baseurl}}"
 							],
 							"path": [
 								"index.php",
@@ -216,12 +213,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/books?type=fiction",
-							"protocol": "https",
+							"raw": "{{baseurl}}/books?type=fiction",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"books"
@@ -265,12 +259,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/books?type=fiction",
-							"protocol": "https",
+							"raw": "{{baseurl}}/books?type=fiction",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"books"
@@ -291,7 +282,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
@@ -322,7 +312,8 @@
 									"\r",
 									"\r",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -330,12 +321,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/books?type=romance",
-							"protocol": "https",
+							"raw": "{{baseurl}}/books?type=romance",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"books"
@@ -395,12 +383,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/orders",
-							"protocol": "https",
+							"raw": "{{baseurl}}/orders",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"orders"
@@ -415,14 +400,14 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
 								"exec": [
 									"const OrderId = pm.response.json();\r",
 									"\r",
 									"console.log(OrderId.orderId);\r",
 									"pm.globals.set(\"OrderId\", OrderId.orderId);\r",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -449,12 +434,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/orders",
-							"protocol": "https",
+							"raw": "{{baseurl}}/orders",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"orders"
@@ -469,14 +451,14 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
 								"exec": [
 									"const OrderId = pm.response.json();\r",
 									"\r",
 									"console.log(OrderId.orderId);\r",
 									"pm.globals.set(\"OrderId\", OrderId.orderId);\r",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -503,12 +485,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/orders",
-							"protocol": "https",
+							"raw": "{{baseurl}}/orders",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"orders"
@@ -561,12 +540,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/orders",
-							"protocol": "https",
+							"raw": "{{baseurl}}/orders",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"orders"
@@ -608,12 +584,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/orders/:orderId",
-							"protocol": "https",
+							"raw": "{{baseurl}}/orders/:orderId",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"orders",
@@ -657,12 +630,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/orders/:orderId",
-							"protocol": "https",
+							"raw": "{{baseurl}}/orders/:orderId",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"orders",
@@ -738,7 +708,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
@@ -747,7 +716,8 @@
 									"pm.test(\"Status code name has string OK\", function () {\r",
 									"    pm.response.to.have.status(\"No Content\");\r",
 									"});"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -774,12 +744,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/orders/:orderId",
-							"protocol": "https",
+							"raw": "{{baseurl}}/orders/:orderId",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"orders",
@@ -801,7 +768,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
@@ -810,7 +776,8 @@
 									"pm.test(\"Status code name has string OK\", function () {\r",
 									"    pm.response.to.have.status(\"No Content\");\r",
 									"});"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -837,12 +804,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/orders/:orderId",
-							"protocol": "https",
+							"raw": "{{baseurl}}/orders/:orderId",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"orders",
@@ -864,7 +828,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
@@ -873,7 +836,8 @@
 									"pm.test(\"Status code name has string OK\", function () {\r",
 									"    pm.response.to.have.status(\"No Content\");\r",
 									"});"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -900,12 +864,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://simple-books-api.glitch.me/orders/:orderId",
-							"protocol": "https",
+							"raw": "{{baseurl}}/orders/:orderId",
 							"host": [
-								"simple-books-api",
-								"glitch",
-								"me"
+								"{{baseurl}}"
 							],
 							"path": [
 								"orders",
@@ -922,6 +883,33 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
